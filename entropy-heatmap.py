@@ -17,6 +17,6 @@ entropy=0;
 for i in lst:
     entropy = entropy+(aasfmx[i,:,:] * np.log2(aasfmx[i,:,:]))
     
+entropy = -1 * entropy; #entropy is -sum( pi * log pi)
+    
 plt.imsave('image.png', entropy, cmap=plt.cm.jet)
-
-
