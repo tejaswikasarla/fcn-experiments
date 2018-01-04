@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 def softmax(z): 
-    return np.exp(z) / np.sum(np.exp(z), axis=1, keepdims=True)
+    return np.exp(z) / np.sum(np.exp(z), axis=0, keepdims=True)
 
 aa_out = net.blobs['score'].data[0] #last layer of fcn output
 aa_sfmx = softmax(aa_out)
